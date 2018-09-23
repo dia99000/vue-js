@@ -1,0 +1,27 @@
+*{
+	color: #2b546a;
+	background: #f9fbfe;
+}
+button {
+	background: #cccccc;
+}
+button:hover{
+	color: #cccccc;
+	background: #454545;
+}
+
+input{
+	padding-right: 2px;
+}
+
+span{
+	padding-right: 2px;
+}
+
+#app ul{
+	list-style: none;
+}
+
+#app li > span.done {
+	text-decoration: line-through;
+}
