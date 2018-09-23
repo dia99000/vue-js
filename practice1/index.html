@@ -1,0 +1,53 @@
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js: Practice1</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- v-bind -->
+  <input type="text" v-bind:value="message">
+  <!-- v-if -->
+  <p v-if="toggle">
+    Hello
+  </p>
+  <hr>
+  <!-- v-show -->
+  <p v-show="toggle2">
+    Hello2
+  </p>
+  <hr>
+  <!-- v-for -->
+  <ol>
+    <span v-for="color in colors" style="">{{color}}</span>
+  </ol>
+  <hr>
+  <!-- v-for(オブジェクト) -->
+  <ul>
+    <li v-for="(v,k) in user">
+      {{ v }} : {{ k }}
+    </li>
+  </ul>
+  <!-- v-on -->
+  <button v-on:click="onclick">
+    Click!
+  </button>
+  <p>
+    {{ now }}
+  </p>
+  <hr>
+  <!-- 双方向データバインディング -->
+  <p>
+    <input type="text" v-model="message">
+  </p>
+  <pre>data</pre>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js: Practice2</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="app">
+  <h1>{{message}}</h1>
+  <input type="text" v-model="message">
+  <hr>
+  <p v-if="toggle"><a v-bind:href="url">Vue.js</a></p>
+  <button v-on:click="clickHandler1">表示</button>
+  <button v-on:click="clickHandler2">非表示</button>
+  <ul>
+    <li v-for="lang in languages">{{lang}}</li>
+  </ul>
+  <hr>
+  <pre>data</pre>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
