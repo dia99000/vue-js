@@ -1,20 +1,25 @@
 /* ビューインスタンスの作成 */
-var app = new Vue({
+let app = new Vue({
 	//options
   el: '#app',
   data: {
+    newHours: null,
     newItem: '',
     todos: []
   },
   methods: {
     addItem: function(event){
-      //  alert();
-      if(this.newItem == '') return;
-      var todo = {
+      if(this.newHours == null || this.newItem == '') return;
+
+      let todo = {
+        hours: this.newHours,
         item: this.newItem,
         isDone: false,
       };
+      //配列todosに変数todoを追加
       this.todos.push(todo);
+      //フォームを初期化
+      this.newHours = '';
       this.newItem = '';
     },
     deleteItem: function(index){

@@ -4,26 +4,21 @@ var app = new Vue({
   el: '#app',
   data: {
 		message: 'Hello Vue.js!',
-    url: 'https://jp.vuejs.org/',
-    toggle: true,
-    languages: [
-      'Javascript',
-      'Ruby',
-      'Python',
-      'C#',
-      'Scala',
-      'Go',
-    ]
-  },
-  methods: {
-    clickHandler1: function(){
-      if(this.toggle === true){
-        this.toggle = false;
-      }else{
-        this.toggle = true;
-      }
+    toggle: false,
+    toggle2: false,
+    colors: ['Red', 'Green', 'Blue'],
+    user: {
+    	firstName: 'Taro',
+      lastName: 'Yamada',
+      age: 28
     },
-  },
+    now: ''
+	},
+  methods: {
+  	onclick: function() {
+      this.now = new Date().toLocaleString();
+    }
+  }
 })
 
 //ビューインスタンスの作成

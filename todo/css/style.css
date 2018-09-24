@@ -22,6 +22,10 @@ span{
 	list-style: none;
 }
 
+span{
+	margin: 10px 10px;
+}
+
 #app li > span.done {
 	text-decoration: line-through;
 }
