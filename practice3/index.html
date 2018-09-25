@@ -1,0 +1,169 @@
+
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Vue.js: Practice3</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="app">
+	<div class="header">Vue.js - ディレクティブ</div>
+	<div class="container">
+		<div>
+			<h2>v-onceディレクティブ</h2>
+			<h5>機能：文字列を反転させる</h5>
+			<ul>
+				<li v-once>v-onceを適用：{{message}}</li>
+				<li >v-onceを適用しない：{{message}}</li>
+			</ul>
+			<button v-on:click="clickHandler">
+				click
+			</button>
+			<hr>
+		</div>
+
+		<div>
+			<h2>v-preディレクティブ</h2>
+			<p v-pre>{{ message }}</p>
+			<hr>
+		</div>
+
+		<div>
+			<h2>v-htmlディレクティブ</h2>
+			<ul>
+				<li>{{ message2 }}</li>
+				<li v-html="message2"></li>
+			</ul>
+			<hr>
+		</div>
+		<div>
+			<h2>v-cloakディレクティブ</h2>
+			<ul>
+				<li v-cloak>{{ message }}</li>
+			</ul>
+			<hr>
+		</div>
+		<div>
+			<h2>v-textディレクティブ</h2>
+			<ul>
+				<li>{{ message }} ... マスタッシュ構文で描画</li>
+				<li><span v-text="message"></span> ... v-textで同様に描画</li>
+			</ul>
+			<hr>
+		</div>
+		<div>
+			<h2>バインディング式</h2>
+			<ul>
+				<li>{{ message }}</li>
+				<li>{{ number + 1 }}</li>
+				<li>{{ message.split('').reverse().join('')}}</li>
+				<!-- 三項演算子、okがtrueの時YESを表示 -->
+				<li>{{ok ? 'YES' : 'NO'}}</li>
+			</ul>
+			<hr>
+		</div>
+		<div>
+			<h2>filter</h2>
+			<ul>
+				<li>Vue.jsでは式の終わりに任意のフィルタを追加できる</li>
+				<li v-pre>{{ 式 | フィルタ名}}</li>
+				<li>{{price | numberFormat }}</li>
+				<input type="text" v-bind:value="price | numberFormat">
+			</ul>
+			<hr>
+		</div>
+	</div>
+	  <!-- ロゴ始まり -->
+		<div class="penroseObjWrap">
+		  <div class="penroseBlock penroseBlock1">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock2">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock3">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock4">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock5">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock6">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock7">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock8">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		  <div class="penroseBlock penroseBlock9">
+		    <div class="face face1"></div>
+		    <div class="face face2"></div>
+		    <div class="face face3"></div>
+		    <div class="face face4"></div>
+		    <div class="face face5"></div>
+		    <div class="face face6"></div>
+		  </div>
+		</div>
+		<!-- ロゴ終わり -->
+</div>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
+<!--
+bpi : Bitcoin Price Index
+
+CoinDesk API
+https://www.coindesk.com/api/
+
+CoinDesk JSON
+https://api.coindesk.com/v1/bpi/currentprice.json
+-->
