@@ -1,0 +1,26 @@
+<!-- SPAを実行するためにブラウザが読み込むファイル -->
+<!doctype html>
+<html>
+<head>
+	<title>SPA Charpter 1 section 1.2.2</title>
+	<!-- スタイルシート -->
+	<link rel="stylesheet" href="css/spa.css" type="text/css">
+	<link rel="stylesheet" href="css/span.shell.css" type="text/css">
+
+	<!-- サードパーティ javascript -->
+	<script src="js/jq/jquery-3.3.1"></script>
+	<script src="js/jq/jquery.uriAnchor.js"></script>
+
+	<!-- javascript -->
+	<script src="js/spa.js"></script>
+	<script src="js/spa.shell.js"></script>
+	<script>
+		$(function(){spa.initModule($('#spa'));})
+	</script>
+</head>
+<body>
+	<div id="spa">
+		<div class="spa-slider"></div>
+	</div>
+</body>
+</html>
