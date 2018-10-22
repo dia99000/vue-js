@@ -1,8 +1,8 @@
 //ルートJavaScript名前空間spaを提供する。
 //css/spa.cssに対応
 
-spa.js
-ルート名前空間モジュール
+// spa.js
+// ルート名前空間モジュール
 
 /*
 jslint			browser: true, continue: true,
